@@ -1,0 +1,59 @@
+.font-test-family {
+  font-family: Chilanka;
+}
+.title{
+  font-size: 30px;
+  font-weight: 650;
+}
+.data{
+  font-size: 14px;
+  margin-top: 2%;
+}
+.wather{
+  font-weight: bold;
+  font-size: 19px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.subakapit{
+  font-size: small;
+  font-weight: bold;
+  margin-bottom: 1.4%;
+}
+.list{
+  margin-left: 30px;
+  list-style: square;
+
+}
+span.bold{
+  font-weight: bold;
+}
+span.bottom{
+  vertical-align: sub;
+  font-size: smaller;
+}
+span.quote ::before {
+content: '"';
+}
+span.power {
+  vertical-align: super;
+  font-size: smaller;
+}
+span.italic{
+  font-style: italic;
+}
+
+span.cross{
+  text-decoration: line-through;
+}
+span.underline {
+  text-decoration: underline;
+}
+span.list::before {
+  content: '\2022';
+}
+
+span.list::after {
+content: "\a";
+white-space: pre;
+}

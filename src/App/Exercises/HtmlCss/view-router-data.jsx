@@ -4,6 +4,7 @@ import { blockRouterMetaData as blockRouterMetaData121220231 } from './Exercise-
 import { blockRouterMetaData as standardTags } from './StandardTags/router-data';
 import { blockRouterMetaData as CssAnimations} from './CssAnimations/router-data';
 import { blockRouterMetaData as blockRouterMetaData120520231 } from './Blok10/router-data';
-
-export const blockRouterMetaData = [blockRouterMetaData121220231,blockRouterMetaData120520231, standardTags, CssAnimations];
+import { blockRouterMetaData as FloatsAndPositioning} from './FloatsAndPositioning/router-data';
+export const blockRouterMetaData = [blockRouterMetaData121220231,blockRouterMetaData120520231, standardTags, FloatsAndPositioning, CssAnimations ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
+

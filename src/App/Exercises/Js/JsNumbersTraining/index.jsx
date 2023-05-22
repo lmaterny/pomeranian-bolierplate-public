@@ -1,6 +1,6 @@
 import './styles.css';
 
-export function Exercise() {
+export function JsNumbersTraining() {
   let age = 18;
   let hasDriverLicense = true;
   let hasCar = true;

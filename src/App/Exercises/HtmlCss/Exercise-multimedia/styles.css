@@ -1,0 +1,35 @@
+.colors .colorName {
+color: aqua;
+}
+.colors .ShortHex {
+color: #f60;
+
+}
+.colors .NormalHex {
+color: #2C0A90;
+}
+.colors .rgb {
+color: rgb(33,177,51,); 
+}
+.colors .rgba {
+color: rgb(33,177,51, 20); /* tutaj ostatni parametr to przezroczystość 0 to 100% */
+font-variant: small-caps;
+}
+.colors .hsl {
+color: aqua; /*hue, saturation, lightness, przekazujemy tutaj tylko jedą wartość*/
+}
+.opacity {
+    /* opacity: 100%; */
+    color: black;
+    padding: 20px 0px;
+    background-color: rgba(68,152,32,0.5); 
+    
+}
+
+
+
+
+
+
+
+

@@ -10,9 +10,7 @@ export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
   blockRouterMetaDataJsVariables2,
   blockRouterMetaDataJsFunction1,
-  js-traning-numbers-and-booleans,
   blockRouterMetaDataJsNumbersTrain,
   blockRouterMetaDataJsBooleans,
-  master,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);

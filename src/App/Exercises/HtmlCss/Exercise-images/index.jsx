@@ -7,8 +7,11 @@ import gif from '../../../Images/stylowi_pl_humor_teczowe-gify-120-animowanych-o
 
 export function Exerciseimages() {
   return <div>
-    <img src={png} alt="ziomale"/>
+    <img className='png' src={png} alt="ziomale"/>
     <img src={jpg} alt="szczęśliwy żyd liczący pieniądze"/>
     <img src={gif} alt="Kot"/>
+
+    {/* backgroun url*/}
+    <div className='imageBackground'>{png}</div>
   </div>
 }

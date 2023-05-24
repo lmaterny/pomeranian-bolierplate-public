@@ -1,0 +1,24 @@
+.paragraph {
+  background: green;
+  /* padding: 50px; */
+  border: 5px solid black;
+  border-radius: 10px;
+  padding: 25px 50px;
+  width: 400px;
+  margin:5px 25px;
+ 
+  /* overflow-x: hidden; */
+}
+.box-model-base .inline-span{
+  background: bisque;
+}
+.content-box {
+  box-sizing: content-box;
+  max-height: 200px;
+  max-width: 200px;
+  overflow:auto;
+}
+.relative-box {
+  height: auto;
+  font-size: 60%;
+}

@@ -1,12 +1,16 @@
 .paragraph {
   background: green;
   /* padding: 50px; */
-  border: 6px solid black;
+  border: 5px solid black;
   border-radius: 10px;
-  padding: 5px 25px;
-  margin: 5px 25px;
+  padding: 25px 50px;
+  width: 400px;
   text-decoration: black;
+  margin:5px 25px;
 }
 .inline-span{
   background: bisque;
+}
+.content-Box {
+  box-sizing: content-box;
 }

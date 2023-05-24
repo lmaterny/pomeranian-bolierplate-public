@@ -5,12 +5,16 @@
   border-radius: 10px;
   padding: 25px 50px;
   width: 400px;
-  text-decoration: black;
   margin:5px 25px;
+ 
+  /* overflow-x: hidden; */
 }
-.inline-span{
+.box-model-base .inline-span{
   background: bisque;
 }
-.content-Box {
+.content-box {
   box-sizing: content-box;
+  max-height: 200px;
+  max-width: 200px;
+  overflow:auto;
 }

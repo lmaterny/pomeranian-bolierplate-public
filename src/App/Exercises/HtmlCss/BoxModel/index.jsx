@@ -8,7 +8,7 @@ export function BoxModel() {
     setIsTrue(!isTrue);
   };
   return (
-    <div>
+    <div className="box-model-base">
       <p className="paragraph" onClick={clickHandler}>
         Donec eu eros commodo, malesuada nisi et, gravida ipsum. Nam quis
         pretium est. Mauris convallis augue turpis, non imperdiet arcu feugiat
@@ -27,7 +27,7 @@ export function BoxModel() {
         {isTrue && <span className="inline-span">Test inlineowy</span>}
       </p>
 
-      <p className="paragraph">
+      <p className="paragraph content-box">
         Donec eu eros commodo, malesuada nisi et, gravida ipsum. Nam quis
         pretium est. Mauris convallis augue turpis, non imperdiet arcu feugiat
         quis. Aenean nec aliquam justo, tincidunt imperdiet odio. Pellentesque

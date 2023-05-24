@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-
+import { FaqIcon } from '../Components/Icons/FaqIcon';
 import './styles/aside.css';
 
 export function AppAside() {
@@ -24,6 +24,10 @@ export function AppAside() {
           </li>
           <li>
             <NavLink to="exercises">Ćwiczenia</NavLink>
+          </li>
+          <li>
+            <FaqIcon />
+            <NavLink to="Faq">FAQ</NavLink>
           </li>
         </ul>
       </nav>

@@ -10,6 +10,7 @@ import { CV } from './App/CV';
 import { Calendar } from './App/Calendar';
 import { Settings } from './App/Settings';
 import { Exercises } from './App/Exercises';
+import { Faq } from './App/Faq/Faq';
 
 export function App() {
   return (
@@ -24,6 +25,7 @@ export function App() {
           <Route path="exercises/*" element={<Exercises />} />
           <Route path="blocks/*" element={<Blocks />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="FAQ/*" element={<Faq />} />
         </Route>
       </Routes>
     </BrowserRouter>

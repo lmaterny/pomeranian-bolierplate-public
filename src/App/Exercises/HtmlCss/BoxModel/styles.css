@@ -18,3 +18,7 @@
   max-width: 200px;
   overflow:auto;
 }
+.relative-box {
+  height: auto;
+  font-size: 60%;
+}

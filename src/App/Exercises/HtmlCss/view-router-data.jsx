@@ -8,6 +8,8 @@ import { blockRouterMetaData as FloatsAndPositioning } from './FloatsAndPosition
 import { blockRouterMetaData as ExerciseMultimedia } from './Exercise-multimedia/router-data';
 import { blockRouterMetaData as Exerciseimages } from './Exercise-images/router-data';
 import { blockRouterMetaData as BoxModel } from './BoxModel/router-data';
+import { blockRouterMetaData as HTMLTable } from './HTMLTable/router-data';
+import { blockRouterMetaData as ArrayRenderToTable } from './ArrayRenderToTable/router-data';
 export const blockRouterMetaData = [
   blockRouterMetaData121220231,
   blockRouterMetaData120520231,
@@ -17,5 +19,7 @@ export const blockRouterMetaData = [
   ExerciseMultimedia,
   Exerciseimages,
   BoxModel,
+  HTMLTable,
+  ArrayRenderToTable,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);

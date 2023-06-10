@@ -2,7 +2,7 @@ import { Button } from "../Button/Buttton";
 import { useState } from 'react';
 
 export const SelectButtonsMemo = (props) => {
-    const {options, setValue} = props
+    const {options, setValue} = props;
   const [newOptions, setNewOptions] = useState(options);
 
   const handleClick = (value) => {

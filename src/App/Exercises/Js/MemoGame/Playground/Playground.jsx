@@ -54,15 +54,15 @@ export const Playground = ({ boardSize, amount, setAmount, setGameEnded, isGameE
   const resetFirstClickedFieldId=() => {
     setTimeout(()=>{
       setFirstClickedFieldId(undefined)
-    }, 4000)
+    }, 3000)
   }
   const resetSecondClickedFieldId=() => {
     setTimeout(()=>{
       setSecondClickedFieldId(undefined)
-    }, 1000)
+    }, 3000)
   }
 
-  useEffect(()=>{
+  useEffect(()=> {
     if(firstClickedFieldId && secondClickedFieldId) {
   setAmount(amount + 1);
 
@@ -70,12 +70,12 @@ export const Playground = ({ boardSize, amount, setAmount, setGameEnded, isGameE
   const secondClickedFieldValue = board.find((item) => item.id === secondClickedFieldId).value;
   if (firstClickedFieldValue === secondClickedFieldValue){
     setBoard(board.map((field) => {
-      // const isClickedFieldPaired = field.id === firstClickedFieldId || field.id === secondClickedFieldId;
+      const isClickedFieldPaired = field.id === firstClickedFieldId || field.id === secondClickedFieldId;
       
       return{
         ...field,
-        // isPaired: field.isPaired ? true : isClickedFieldPaired
-        isPaired: field.isPaired ? true : firstClickedFieldId === field.id || secondClickedFieldId === field.id
+        isPaired: field.isPaired ? true : isClickedFieldPaired
+        
         };
       }))
     }
@@ -84,7 +84,6 @@ export const Playground = ({ boardSize, amount, setAmount, setGameEnded, isGameE
   useEffect(() => {
     if ( board.find(item => item.isPaired === false)){
       setGameEnded(false);
-      isGameEnded(false);
     } else {
       setGameStarted (false)
       setGameEnded(true);
@@ -103,9 +102,11 @@ export const Playground = ({ boardSize, amount, setAmount, setGameEnded, isGameE
         return (
           <div
             className={`board-field ${clickedFieldClassName} ${pairedFieldClassName}`}
-            onClick={() => handleClick(element)}
+            onClick={() => {
+              handleClick(element);
+            }}
           >
-            {showValue && element.value}
+            {showValue && element.value}{' '}
           </div>
         );
       })}

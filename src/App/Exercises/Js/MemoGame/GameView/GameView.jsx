@@ -3,19 +3,27 @@ import { Menu } from '../Menu/Menu';
 import { Playground } from '../Playground/Playground';
 import './GameView.css';
 
-export const GameView = ({ setGameStarted,time, amount, setAmout }) => {
+export const GameView = ({ setGameStartedMemo, time, amount, setAmount}) => {
   return (
-    <>
-      <Menu label={'CZAS GRY'}>
-        <Button isDisabled={true}>{time}</Button>
-      </Menu>
-      <Menu label={'LICZBA RUCHÓW'}>
-        <Button isDisabled={true}>{amount}</Button>
-      </Menu>
-      <Menu label={'PRZYCISKI STERUJĄCE'}>
-        <Button onClick={() => {setGameStarted(false); setAmout(0)}}>PASS</Button>
-      </Menu>
-      <Playground />
-    </>
-  );
+  <div>
+    <Menu label="Czas gry">
+      <Button isDisabled={true}>{time}</Button>
+    </Menu>
+    <Menu label="Liczba ruchów">
+      <Button isDisabled={true}>{amount}</Button>
+    </Menu>
+    <Menu label="Przyciski sterujące">
+      <Button
+        isControl={true}
+        onClick={() => {
+          setGameStartedMemo(false);
+          setAmount(0);
+        }}
+        
+      >
+        PASS
+      </Button>
+    </Menu>
+  </div>
+);
 };

@@ -3,10 +3,10 @@ import { Menu } from '../Menu/Menu';
 import { SelectButtonsMemo } from '../Select ButtonsMemo/SelectButtonsMemo';
 import './MenuView.css';
 
-export const MenuView = ({ setGameStarted, setBoardSize, myTime, amount,isGameEnded }) => {
+export const MenuView = ({ setGameStarted, setBoardSize, myTime, amount, gameEnded, setAmount, boardSize }) => {
   return (
     <>
-    {isGameEnded && <p>Twój wynik to {amount} par w czasie {myTime} </p>}
+    {gameEnded && <p>Twój wynik to {boardSize/2} znalezionych par w czasie {myTime} prz użyciu {amount} </p>}
       <Menu label="Liczba Elementów">
         <SelectButtonsMemo
         setValue={setBoardSize}
@@ -35,6 +35,7 @@ export const MenuView = ({ setGameStarted, setBoardSize, myTime, amount,isGameEn
         isControl={true}
         onClick={() => {
           setGameStarted(true);
+          setAmount(0)
         }}
         >
         Start

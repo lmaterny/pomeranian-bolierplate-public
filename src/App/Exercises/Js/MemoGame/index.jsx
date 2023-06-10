@@ -11,7 +11,7 @@ export function MemoGame() {
   const [timeInterval, setTimeInterval] = useState();
   const [boardSize, setboardSize] = useState()
   const[amount, setAmount] = useState(0);
-  const[isGameEnded, setGameEnded] = useState(false);
+  const[gameEnded, setGameEnded] = useState(false);
   const[myTime, setMyTime] = useState(0);
 
   useEffect(() => {
@@ -28,7 +28,6 @@ export function MemoGame() {
   }, [isGameStarted])
   
 
-  console.log(isGameEnded,"isGameEnded")
   return (
     <div className="memoryGameMain">
       <h4>Memory Game</h4>
@@ -38,18 +37,17 @@ export function MemoGame() {
       {isGameStarted ? (
         <GameView setGameStarted={setGameStarted} time={time} amount={amount} setAmout={setAmount} />
       ) : (
-        <MenuView setGameStarted={setGameStarted} setBoardSize={setboardSize} amount={amount} />
+        <MenuView setGameStarted={setGameStarted} setBoardSize={setboardSize} myTime={myTime} setAmount={setAmount} amount={amount} gameEnded={gameEnded} boardSize={boardSize}  />
       )}
       {isGameStarted && (<Playground 
       boardSize={boardSize} 
+      setGameStarted={setGameStarted}
       amount={amount} 
       setAmount={setAmount} 
-      setGameEnded={setGameEnded} 
-      isGameEnded={isGameEnded}
-      setGameStarted={setGameStarted}
       time={time}
       setMyTime={setMyTime}
-      myTime={myTime}
+      setGameEnded={setGameEnded} 
+      gameEnded={gameEnded}
       />) }
     </div>
   );

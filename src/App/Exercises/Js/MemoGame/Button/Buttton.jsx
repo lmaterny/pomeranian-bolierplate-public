@@ -1,15 +1,26 @@
 import { isDisabled } from '@testing-library/user-event/dist/utils';
 import './Button.css';
 
-export const Button = ({ children, isActive, onClick, isDisabled }) => {
-  const activeClass = isActive ? 'button-active' : '';
+export const Button = ({
+  onClick,
+  children,
+  isDisabled,
+  isActive,
+  isControl,
+}) => {
   return (
-    <button
-      onClick={onClick}
-      className={`button ${activeClass}`}
-      disabled={isDisabled}
-    >
-      {children}
-    </button>
+    <div>
+      <button
+        onClick={onClick}
+        disabled={isDisabled}
+        className={`button ${isActive ? 'button-active' : ''} ${
+          isControl ? `button-control` : ''
+        }`}
+        isActive={isActive}
+        isControl={isControl}
+      >
+        {children}
+      </button>
+    </div>
   );
 };

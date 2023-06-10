@@ -6,7 +6,7 @@ import './MenuView.css';
 export const MenuView = ({ setGameStarted, setBoardSize, myTime, amount, gameEnded, setAmount, boardSize }) => {
   return (
     <>
-    {gameEnded && <p>Twój wynik to {boardSize/2} znalezionych par w czasie {myTime} prz użyciu {amount} </p>}
+    {gameEnded && <p>Twój wynik to {boardSize/2} znalezionych par w czasie {myTime} prz użyciu {amount} kliknięć </p>}
       <Menu label="Liczba Elementów">
         <SelectButtonsMemo
         setValue={setBoardSize}

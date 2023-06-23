@@ -4,6 +4,7 @@ import { Playground } from './Playground/Playground';
 import { useEffect, useState } from 'react';
 import './styles.css';
 import { Result } from './Result/Result';
+import React from 'react';
 export function HitTheMole() {
   const [isGameStarted, setGameStarted] = useState(false);
   const [score, setScore] = useState(0);

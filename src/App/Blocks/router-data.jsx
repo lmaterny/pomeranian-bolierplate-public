@@ -1,4 +1,5 @@
 import { getParsedRouterDataList } from '../router-data/parseRouterData';
+import React from 'react';
 
 import { blockRouterMetaData as block_1_RouterMetaData } from './Block_1/router-data';
 import { NoBlockMessage } from './NoBlockMessage';

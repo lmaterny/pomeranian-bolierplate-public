@@ -1,5 +1,5 @@
 import { Blok9 } from './Blok 9';
-
+import React from 'react';
 export const Blok9MetaData = {
   path: 'blok9',
   date: '12-12-2023',

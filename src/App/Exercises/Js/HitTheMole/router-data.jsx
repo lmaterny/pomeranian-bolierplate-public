@@ -1,5 +1,5 @@
 import { HitTheMole } from './index';
-
+import React from 'react';
 export const blockRouterMetaData = {
   path: 'Hit-the-mole',
   date: null,

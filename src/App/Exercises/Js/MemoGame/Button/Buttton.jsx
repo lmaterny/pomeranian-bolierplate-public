@@ -1,5 +1,6 @@
 import { isDisabled } from '@testing-library/user-event/dist/utils';
 import './Button.css';
+import React from 'react';
 
 export const Button = ({
   onClick,

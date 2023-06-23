@@ -3,6 +3,7 @@ import { Menu } from '../Menu/Menu';
 import { Result } from '../Result/Result';
 import { SelectButtons } from '../SelectButtons/SelectButtons';
 import './MenuView.css';
+import React from 'react';
 
 export const MenuView = ({
   isGameStarted,

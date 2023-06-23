@@ -1,10 +1,10 @@
-import { Exercise } from './index';
+import { JsPromisesExercise } from './index';
 import React from 'react';
 export const blockRouterMetaData = {
-  path: 'js-variables-1',
+  path: 'promisesAndMe',
   date: null,
   linkLabel: 'Zmienne w JS - string',
   blockNo: 6,
-  element: <Exercise />,
+  element: <JsPromisesExercise />,
   tags: ['array', 'map', 'filter', 'flex'],
 };

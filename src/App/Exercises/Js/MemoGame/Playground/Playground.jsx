@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './Playground.css';
-
+import React from 'react';
 function shuffleArray(s) {
   for (let i = s.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -34,7 +34,16 @@ function generateBoard(size) {
     return { ...obj, id: index + 1 };
   });
 }
-export const Playground = ({ boardSize, amount, setAmount, setGameEnded, isGameEnded, setMyTime, time, setGameStarted }) => {
+export const Playground = ({
+  boardSize,
+  amount,
+  setAmount,
+  setGameEnded,
+  isGameEnded,
+  setMyTime,
+  time,
+  setGameStarted,
+}) => {
   const [firstClickedFieldId, setFirstClickedFieldId] = useState();
   const [secondClickedFieldId, setSecondClickedFieldId] = useState();
   const [board, setBoard] = useState(generateBoard(boardSize));
@@ -51,45 +60,52 @@ export const Playground = ({ boardSize, amount, setAmount, setGameEnded, isGameE
     }
   };
 
-  const resetFirstClickedFieldId=() => {
-    setTimeout(()=>{
-      setFirstClickedFieldId(undefined)
-    }, 3000)
-  }
-  const resetSecondClickedFieldId=() => {
-    setTimeout(()=>{
-      setSecondClickedFieldId(undefined)
-    }, 3000)
-  }
+  const resetFirstClickedFieldId = () => {
+    setTimeout(() => {
+      setFirstClickedFieldId(undefined);
+    }, 3000);
+  };
+  const resetSecondClickedFieldId = () => {
+    setTimeout(() => {
+      setSecondClickedFieldId(undefined);
+    }, 3000);
+  };
 
-  useEffect(()=> {
-    if(firstClickedFieldId && secondClickedFieldId) {
-  setAmount(amount + 1);
-
-  const firstClickedFieldValue = board.find((item) => item.id === firstClickedFieldId).value;
-  const secondClickedFieldValue = board.find((item) => item.id === secondClickedFieldId).value;
-  if (firstClickedFieldValue === secondClickedFieldValue){
-    setBoard(board.map((field) => {
-      const isClickedFieldPaired = field.id === firstClickedFieldId || field.id === secondClickedFieldId;
-      
-      return{
-        ...field,
-        isPaired: field.isPaired ? true : isClickedFieldPaired
-        
-        };
-      }))
-    }
-  }
-}, [firstClickedFieldId, secondClickedFieldId]);
   useEffect(() => {
-    if ( board.find(item => item.isPaired === false)){
+    if (firstClickedFieldId && secondClickedFieldId) {
+      setAmount(amount + 1);
+
+      const firstClickedFieldValue = board.find(
+        (item) => item.id === firstClickedFieldId
+      ).value;
+      const secondClickedFieldValue = board.find(
+        (item) => item.id === secondClickedFieldId
+      ).value;
+      if (firstClickedFieldValue === secondClickedFieldValue) {
+        setBoard(
+          board.map((field) => {
+            const isClickedFieldPaired =
+              field.id === firstClickedFieldId ||
+              field.id === secondClickedFieldId;
+
+            return {
+              ...field,
+              isPaired: field.isPaired ? true : isClickedFieldPaired,
+            };
+          })
+        );
+      }
+    }
+  }, [firstClickedFieldId, secondClickedFieldId]);
+  useEffect(() => {
+    if (board.find((item) => item.isPaired === false)) {
       setGameEnded(false);
     } else {
-      setGameStarted (false)
+      setGameStarted(false);
       setGameEnded(true);
       setMyTime(time);
     }
-  },[board])
+  }, [board]);
   return (
     <div className="board">
       {board.map((element) => {

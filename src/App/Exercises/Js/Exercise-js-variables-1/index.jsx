@@ -1,4 +1,5 @@
 import './styles.css';
+import React from 'react';
 
 export function Exercise() {
   let string1 = 'Jon Snow';

@@ -11,6 +11,7 @@ import { Calendar } from './App/Calendar';
 import { Settings } from './App/Settings';
 import { Exercises } from './App/Exercises';
 import { Faq } from './App/Faq/Faq';
+import { HeaderMenu } from './App/Components/HeaderMenu/HeaderMenu';
 
 export function App() {
   return (

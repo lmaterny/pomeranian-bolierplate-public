@@ -1,5 +1,6 @@
 import { Button } from '../Button/Button';
 import { useState } from 'react';
+import React from 'react';
 
 export const SelectButtons = (props) => {
   const { options, setOptionChosen, setInitialTime } = props;

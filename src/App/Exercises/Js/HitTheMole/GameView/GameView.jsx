@@ -3,6 +3,7 @@ import { Button } from '../Button/Button';
 import { Menu } from '../Menu/Menu';
 import './GameView.css';
 import { Result } from '../Result/Result';
+import React from 'react';
 
 export const GameView = ({
   setGameStarted,

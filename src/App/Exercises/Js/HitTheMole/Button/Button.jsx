@@ -1,5 +1,5 @@
 import './Button.css';
-
+import React from 'react';
 export const Button = ({ children, isActive, onClick }) => {
   return (
     <button

@@ -1,5 +1,5 @@
 import './styles.css';
-
+import React from 'react';
 export const RoundImage = (props) => {
   const { title, src, height, color, width } = props;
   //title === props.title

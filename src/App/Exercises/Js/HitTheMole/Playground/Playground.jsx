@@ -1,7 +1,7 @@
 import './Playground.css';
 import { Mole } from '../../../../Components/Icons/Mole.jsx';
 import { useEffect, useState } from 'react';
-
+import React from 'react';
 const fields = [
   {
     id: 1,

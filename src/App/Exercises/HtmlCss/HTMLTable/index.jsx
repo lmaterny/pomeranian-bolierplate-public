@@ -1,5 +1,5 @@
 import './styles.css';
-
+import React from 'react';
 export function HTMLTable() {
   return (
     <table className="tabelka">

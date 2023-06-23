@@ -1,6 +1,6 @@
 import './styles.css';
 import svg from '../Components/Icons/arrow-down-icon.svg';
-
+import React from 'react';
 export const Faq = () => {
   return (
     <div>

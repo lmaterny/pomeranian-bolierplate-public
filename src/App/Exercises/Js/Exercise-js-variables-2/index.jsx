@@ -1,4 +1,5 @@
 import './styles.css';
+import React from 'react';
 
 export function Exercise() {
   const mathResult1 = 2 * 5;

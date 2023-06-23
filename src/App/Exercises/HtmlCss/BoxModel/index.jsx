@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './styles.css';
+import React from 'react';
 
 export function BoxModel() {
   const { isTrue, setIsTrue } = useState(true);

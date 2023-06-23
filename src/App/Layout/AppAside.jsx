@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { ReactComponent as FaqIcon } from '../Components/Icons/messages.svg';
 import './styles/aside.css';
-
+import React from 'react';
 export function AppAside() {
   return (
     <aside>

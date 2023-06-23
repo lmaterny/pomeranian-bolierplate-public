@@ -1,5 +1,5 @@
 import './styles/footer.css';
-
+import React from 'react';
 const email = 'twoj-email@pomeranian.it';
 const phone = '+48-999-999-999';
 

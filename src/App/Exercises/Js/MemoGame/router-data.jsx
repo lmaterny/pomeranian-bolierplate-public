@@ -1,5 +1,5 @@
 import { MemoGame } from './index';
-
+import React from 'react';
 export const blockRouterMetaData = {
   path: 'Memo-Game',
   date: null,

@@ -8,6 +8,7 @@ import { blockRouterMetaData as blockRouterMetaDataJsBooleans } from './Exercise
 import { blockRouterMetaData as blockRouterMetaDataHitTheMole } from './HitTheMole/router-data';
 import { blockRouterMetaData as blockRouterMetaDataMemoGame } from './MemoGame/router-data';
 import { blockRouterMetaData as blockRouterMetaDataPromises } from './Exercise-promises/router-data';
+import { blockRouterMetaData as blockRouterMetaDataRedux } from './Redux/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
@@ -18,5 +19,6 @@ export const blockRouterMetaData = [
   blockRouterMetaDataHitTheMole,
   blockRouterMetaDataMemoGame,
   blockRouterMetaDataPromises,
+  blockRouterMetaDataRedux,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
